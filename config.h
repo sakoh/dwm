@@ -48,12 +48,13 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	*/
-	/* class    instance      title       	 tags mask    isfloating   isterminal  noswallow  monitor */
-	{ "Gimp",     NULL,       NULL,       	    1 << 8,       0,           0,         0,        -1 },
-	{ TERMCLASS,   NULL,       NULL,       	    0,            0,           1,         0,        -1 },
-	{ NULL,       NULL,       "Event Tester",   0,            0,           0,         1,        -1 },
-	{ NULL,      "spterm",    NULL,       	    SPTAG(0),     1,           1,         0,        -1 },
-	{ NULL,      "spcalc",    NULL,       	    SPTAG(1),     1,           1,         0,        -1 },
+	/* class    	instance      	title			tags mask    isfloating   isterminal  noswallow  monitor */
+	{ "Gimp",	NULL,		NULL,       	    	1 << 8,       0,           0,         0,        -1 },
+	{ "discord",	NULL,       	NULL,       	    	1 << 2,       0,           0,         0,        -1 },
+	{ TERMCLASS,	NULL,       	NULL,       	    	0,            0,           1,         0,        -1 },
+	{ NULL,		NULL,       	"Event Tester",		0,            0,           0,         1,        -1 },
+	{ NULL,		"spterm",    	NULL,       	    	SPTAG(0),     1,           1,         0,        -1 },
+	{ NULL,		"spcalc",    	NULL,       	    	SPTAG(1),     1,           1,         0,        -1 },
 };
 
 /* layout(s) */
@@ -131,11 +132,12 @@ ResourcePref resources[] = {
 #include "shiftview.c"
 
 static Key keys[] = {
-	/* modifier                     key        function        argument */
-	STACKKEYS(MODKEY,                          focus)
-	STACKKEYS(MODKEY|ShiftMask,                push)
-	/* { MODKEY|ShiftMask,		XK_Escape,	spawn,	SHCMD("") }, */
-	{ MODKEY,			XK_grave,	spawn,	SHCMD("dmenuunicode") },
+	/* modifier                     key        	function        argument */
+	STACKKEYS(MODKEY,                          	focus)
+	STACKKEYS(MODKEY|ShiftMask,                	push)
+	/* { MODKEY|ShiftMask,		XK_Escape,	spawn,		SHCMD("") }, */
+	{ MODKEY,			XK_grave,	spawn,		SHCMD("dmenuunicode") },
+	{ MODKEY|ShiftMask,		XK_d,		spawn,		SHCMD("flatpak run com.discordapp.Discord") },
 	/* { MODKEY|ShiftMask,		XK_grave,	togglescratch,	SHCMD("") }, */
 	TAGKEYS(			XK_1,		0)
 	TAGKEYS(			XK_2,		1)
