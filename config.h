@@ -144,6 +144,8 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_i,		spawn,		SHCMD("firefox") },
 	{ MODKEY|ALTKEY,		XK_g,		spawn,		SHCMD("steam") },
 	{ MODKEY|ControlMask,		XK_g,		spawn,		SHCMD("lutris") },
+	{ MODKEY|ALTKEY,		XK_n,		spawn,		SHCMD("nitrogen") },
+
 	/* { MODKEY|ShiftMask,		XK_grave,	togglescratch,	SHCMD("") }, */
 	TAGKEYS(			XK_1,		0)
 	TAGKEYS(			XK_2,		1)
