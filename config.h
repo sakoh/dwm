@@ -16,10 +16,10 @@ static int smartgaps          = 0;        /* 1 means no outer gap when there is 
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 static char *fonts[]          = {
-	"Font Awesome 5 Free Solid:pixelsize=14"
-	"Fira Mono Nerd Font:pixelsize=16",
-	"monospace:pixelsize=16",
-	"JoyPixels:pixelsize=16:antialias=true:autohint=true"
+	"Font Awesome 5 Free Solid:pixelsize=18"
+	"Fira Mono Nerd Font:pixelsize=18",
+	"monospace:pixelsize=18",
+	"JoyPixels:pixelsize=18:antialias=true:autohint=true"
 };
 static char normbgcolor[]           = "#101726";
 static char normbordercolor[]       = "#8fbcbb";
