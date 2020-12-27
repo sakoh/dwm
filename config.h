@@ -46,21 +46,22 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "\uf120", "\uf57d", "\uf086", "\uf11b", "\uf001", "\uf53f" };
+static const char *tags[] = { "\uf120", "\uf57d", "\uf086", "\uf11b", "\uf001", "\uf53f", "\uf108" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	*/
-	/* class    	instance      	title			tags mask    	isfloating   isterminal  noswallow  monitor */
-	{ "Gimp",	NULL,		NULL,       	    	1 << 5,       	0,           0,         0,        -1 },
-	{ "discord",	NULL,       	NULL,       	    	1 << 2,       	0,           0,         0,        -1 },
-	{ "Steam",	NULL,       	NULL,       	    	1 << 3,       	0,           0,         0,        -1 },
-	{ TERMCLASS,	NULL,       	NULL,       	    	0,            	0,           1,         0,        -1 },
-	{ NULL,		NULL,       	"Event Tester",		0,            	0,           0,         1,        -1 },
-	{ NULL,		"spterm",    	NULL,       	    	SPTAG(0),     	1,           1,         0,        -1 },
-	{ NULL,		"spcalc",    	NULL,       	    	SPTAG(1),     	1,           1,         0,        -1 },
+	/* class    		instance      	title			tags mask    	isfloating   isterminal  noswallow  monitor */
+	{ "Gimp",		NULL,		NULL,       	    	1 << 5,       	0,           0,         0,        -1 },
+	{ "discord",		NULL,       	NULL,       	    	1 << 2,       	0,           0,         0,        -1 },
+	{ "Steam",		NULL,       	NULL,       	    	1 << 3,       	0,           0,         0,        -1 },
+	{ "Virt-manager",	NULL,       	NULL,       		1 << 6,       	0,           0,         0,        -1 },
+	{ TERMCLASS,		NULL,       	NULL,       	    	0,            	0,           1,         0,        -1 },
+	{ NULL,			NULL,       	"Event Tester",		0,            	0,           0,         1,        -1 },
+	{ NULL,			"spterm",    	NULL,       	    	SPTAG(0),     	1,           1,         0,        -1 },
+	{ NULL,			"spcalc",    	NULL,       	    	SPTAG(1),     	1,           1,         0,        -1 },
 };
 
 /* layout(s) */
@@ -150,6 +151,7 @@ static Key keys[] = {
 	{ MODKEY|ALTKEY,		XK_g,		spawn,		SHCMD("steam") },
 	{ MODKEY|ControlMask,		XK_g,		spawn,		SHCMD("lutris") },
 	{ MODKEY|ALTKEY,		XK_n,		spawn,		SHCMD("nitrogen") },
+	{ MODKEY|ALTKEY,		XK_v,		spawn,		SHCMD("virt-manager") },
 
 	/* { MODKEY|ShiftMask,		XK_grave,	togglescratch,	SHCMD("") }, */
 	TAGKEYS(			XK_1,		0)
