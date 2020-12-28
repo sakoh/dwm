@@ -152,6 +152,8 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_g,		spawn,		SHCMD("lutris") },
 	{ MODKEY|ALTKEY,		XK_n,		spawn,		SHCMD("nitrogen") },
 	{ MODKEY|ALTKEY,		XK_v,		spawn,		SHCMD("virt-manager") },
+	{ MODKEY|ALTKEY,		XK_p,		spawn,		SHCMD("$HOME/.config/dmenu/power") },
+	{ MODKEY|ALTKEY,		XK_c,		spawn,		SHCMD("$HOME/.config/dmenu/wifi") },
 
 	/* { MODKEY|ShiftMask,		XK_grave,	togglescratch,	SHCMD("") }, */
 	TAGKEYS(			XK_1,		0)
