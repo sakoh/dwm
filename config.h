@@ -60,6 +60,7 @@ static const Rule rules[] = {
 	{ "Brave-browser",	NULL,       	NULL,       	    	1 << 1,       	0,           0,         0,        -1 },
 	{ "Steam",		NULL,       	NULL,       	    	1 << 3,       	0,           0,         0,        -1 },
 	{ "Virt-manager",	NULL,       	NULL,       		1 << 6,       	0,           0,         0,        -1 },
+	{ "Spotify",		NULL,       	NULL,       		1 << 4,       	0,           0,         0,        -1 },
 	{ TERMCLASS,		NULL,       	NULL,       	    	0,            	0,           1,         0,        -1 },
 	{ NULL,			NULL,       	"Event Tester",		0,            	0,           0,         1,        -1 },
 	{ NULL,			"spterm",    	NULL,       	    	SPTAG(0),     	1,           1,         0,        -1 },
@@ -156,6 +157,7 @@ static Key keys[] = {
 	{ MODKEY|ALTKEY,		XK_v,		spawn,		SHCMD("virt-manager") },
 	{ MODKEY|ALTKEY,		XK_p,		spawn,		SHCMD("$HOME/.config/dmenu/power") },
 	{ MODKEY|ALTKEY,		XK_c,		spawn,		SHCMD("$HOME/.config/dmenu/wifi") },
+	{ MODKEY|ALTKEY,		XK_m,		spawn,		SHCMD("flatpak run com.spotify.Client") },
 
 	/* { MODKEY|ShiftMask,		XK_grave,	togglescratch,	SHCMD("") }, */
 	TAGKEYS(			XK_1,		0)
