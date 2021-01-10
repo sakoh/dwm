@@ -56,7 +56,7 @@ static const Rule rules[] = {
 	/* class    		instance      	title			tags mask    	isfloating   isterminal  noswallow  monitor */
 	{ "Gimp",		NULL,		NULL,       	    	1 << 5,       	0,           0,         0,        -1 },
 	{ "discord",		NULL,       	NULL,       	    	1 << 2,       	0,           0,         0,        -1 },
-	{ "Firefox",		NULL,       	NULL,       	    	1 << 1,       	0,           0,         0,        -1 },
+	{ "Chromium",		NULL,       	NULL,       	    	1 << 1,       	0,           0,         0,        -1 },
 	{ "Brave-browser",	NULL,       	NULL,       	    	1 << 1,       	0,           0,         0,        -1 },
 	{ "Steam",		NULL,       	NULL,       	    	1 << 3,       	0,           0,         0,        -1 },
 	{ "Virt-manager",	NULL,       	NULL,       		1 << 6,       	0,           0,         0,        -1 },
@@ -149,8 +149,8 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_Escape,	spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_grave,	spawn,		SHCMD("dmenuunicode") },
 	{ MODKEY|ALTKEY,		XK_d,		spawn,		SHCMD("flatpak run com.discordapp.Discord") },
-	{ MODKEY|ALTKEY,		XK_i,		spawn,		SHCMD("$HOME/appimages/Brave_Web_Browser-x86_64.AppImage") },
-	{ MODKEY|ControlMask,		XK_i,		spawn,		SHCMD("firefox") },
+	{ MODKEY|ALTKEY,		XK_i,		spawn,		SHCMD("chromium") },
+	{ MODKEY|ControlMask,		XK_i,		spawn,		SHCMD("$HOME/appimages/Brave_Web_Browser-x86_64.AppImage") },
 	{ MODKEY|ALTKEY,		XK_g,		spawn,		SHCMD("steam") },
 	{ MODKEY|ControlMask,		XK_g,		spawn,		SHCMD("lutris") },
 	{ MODKEY|ALTKEY,		XK_n,		spawn,		SHCMD("nitrogen") },
