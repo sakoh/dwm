@@ -16,10 +16,10 @@ static int smartgaps          = 0;        /* 1 means no outer gap when there is 
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 static char *fonts[]          = {
-	"Font Awesome 5 Free Solid:pixelsize=18"
-	"Fira Mono Nerd Font:pixelsize=18",
+	"Font Awesome 5 Free Solid:pixelsize=18",
+	"Hack Bold Nerd Font Complete Mono:pixelsize=18",
 	"monospace:pixelsize=18",
-	"JoyPixels:pixelsize=18:antialias=true:autohint=true"
+        "JoyPixels:pixelsize=18:antialias=true:autohint=true"
 };
 static char normbgcolor[]           = "#101726";
 static char normbordercolor[]       = "#8fbcbb";
@@ -148,9 +148,9 @@ static Key keys[] = {
 	STACKKEYS(MODKEY|ShiftMask,                	push)
 	/* { MODKEY|ShiftMask,		XK_Escape,	spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_grave,	spawn,		SHCMD("dmenuunicode") },
-	{ MODKEY|ALTKEY,		XK_d,		spawn,		SHCMD("flatpak run com.discordapp.Discord") },
+	{ MODKEY|ALTKEY,		XK_d,		spawn,		SHCMD("discord") },
 	{ MODKEY|ALTKEY,		XK_i,		spawn,		SHCMD("chromium") },
-	{ MODKEY|ControlMask,		XK_i,		spawn,		SHCMD("$HOME/appimages/Brave_Web_Browser-x86_64.AppImage") },
+	{ MODKEY|ControlMask,		XK_i,		spawn,		SHCMD("brave") },
 	{ MODKEY|ALTKEY,		XK_g,		spawn,		SHCMD("steam") },
 	{ MODKEY|ControlMask,		XK_g,		spawn,		SHCMD("lutris") },
 	{ MODKEY|ALTKEY,		XK_n,		spawn,		SHCMD("nitrogen") },
