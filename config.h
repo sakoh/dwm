@@ -59,6 +59,7 @@ static const Rule rules[] = {
 	{ "Chromium",		NULL,       	NULL,       	    	1 << 1,       	0,           0,         0,        -1 },
 	{ "Brave-browser",	NULL,       	NULL,       	    	1 << 1,       	0,           0,         0,        -1 },
 	{ "Steam",		NULL,       	NULL,       	    	1 << 3,       	0,           0,         0,        -1 },
+	{ "Lutris",		NULL,       	NULL,       	    	1 << 3,       	0,           0,         0,        -1 },
 	{ "Virt-manager",	NULL,       	NULL,       		1 << 6,       	0,           0,         0,        -1 },
 	{ "Spotify",		NULL,       	NULL,       		1 << 4,       	0,           0,         0,        -1 },
 	{ TERMCLASS,		NULL,       	NULL,       	    	0,            	0,           1,         0,        -1 },
