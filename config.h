@@ -56,7 +56,7 @@ static const Rule rules[] = {
 	/* class    		instance      	title			tags mask    	isfloating   isterminal  noswallow  monitor */
 	{ "Gimp",		NULL,		NULL,       	    	1 << 5,       	0,           0,         0,        -1 },
 	{ "discord",		NULL,       	NULL,       	    	1 << 2,       	0,           0,         0,        -1 },
-	{ "telegram-desktop",	NULL,       	NULL,       	    	1 << 2,       	0,           0,         0,        -1 },
+	{ "TelegramDesktop",	NULL,       	NULL,       	    	1 << 2,       	0,           0,         0,        -1 },
 	{ "Chromium",		NULL,       	NULL,       	    	1 << 1,       	0,           0,         0,        -1 },
 	{ "Brave-browser",	NULL,       	NULL,       	    	1 << 1,       	0,           0,         0,        -1 },
 	{ "Steam",		NULL,       	NULL,       	    	1 << 3,       	0,           0,         0,        -1 },
@@ -151,6 +151,7 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_Escape,	spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_grave,	spawn,		SHCMD("dmenuunicode") },
 	{ MODKEY|ALTKEY,		XK_d,		spawn,		SHCMD("discord") },
+	{ MODKEY|ALTKEY,		XK_t,		spawn,		SHCMD("telegram-desktop") },
 	{ MODKEY|ALTKEY,		XK_i,		spawn,		SHCMD("chromium") },
 	{ MODKEY|ControlMask,		XK_i,		spawn,		SHCMD("brave") },
 	{ MODKEY|ALTKEY,		XK_g,		spawn,		SHCMD("steam") },
