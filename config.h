@@ -46,7 +46,7 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "\uf120", "\uf57d", "\uf086", "\uf11b", "\uf001", "\uf53f", "\uf108" };
+static const char *tags[] = { "\uf120", "\uf57d", "\uf086", "\uf11b", "\uf001", "\uf53f", "\uf108", "\uf03d" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -58,10 +58,13 @@ static const Rule rules[] = {
 	{ "discord",		NULL,       	NULL,       	    	1 << 2,       	0,           0,         0,        -1 },
 	{ "TelegramDesktop",	NULL,       	NULL,       	    	1 << 2,       	0,           0,         0,        -1 },
 	{ "Chromium",		NULL,       	NULL,       	    	1 << 1,       	0,           0,         0,        -1 },
+	{ "Firefox",		NULL,       	NULL,       	    	1 << 1,       	0,           0,         0,        -1 },
 	{ "Brave-browser",	NULL,       	NULL,       	    	1 << 1,       	0,           0,         0,        -1 },
 	{ "Steam",		NULL,       	NULL,       	    	1 << 3,       	0,           0,         0,        -1 },
 	{ "Lutris",		NULL,       	NULL,       	    	1 << 3,       	0,           0,         0,        -1 },
 	{ "Virt-manager",	NULL,       	NULL,       		1 << 6,       	0,           0,         0,        -1 },
+	{ "kdenlive",		NULL,       	NULL,       		1 << 7,       	0,           0,         0,        -1 },
+	{ "obs",		NULL,       	NULL,       		1 << 7,       	0,           0,         0,        -1 },
 	{ "Spotify",		NULL,       	NULL,       		1 << 4,       	0,           0,         0,        -1 },
 	{ TERMCLASS,		NULL,       	NULL,       	    	0,            	0,           1,         0,        -1 },
 	{ NULL,			NULL,       	"Event Tester",		0,            	0,           0,         1,        -1 },
@@ -150,14 +153,16 @@ static Key keys[] = {
 	STACKKEYS(MODKEY|ShiftMask,                	push)
 	/* { MODKEY|ShiftMask,		XK_Escape,	spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_grave,	spawn,		SHCMD("dmenuunicode") },
-	{ MODKEY|ALTKEY,		XK_d,		spawn,		SHCMD("discord") },
+	{ MODKEY|ALTKEY,		XK_d,		spawn,		SHCMD("$HOME/appimages/Discord-0.0.15-x86_64.AppImage") },
 	{ MODKEY|ALTKEY,		XK_t,		spawn,		SHCMD("telegram-desktop") },
-	{ MODKEY|ALTKEY,		XK_i,		spawn,		SHCMD("chromium") },
-	{ MODKEY|ControlMask,		XK_i,		spawn,		SHCMD("brave") },
+	//{ MODKEY|ALTKEY,		XK_i,		spawn,		SHCMD("firefox-bin") },
+	{ MODKEY|ALTKEY,		XK_i,		spawn,		SHCMD("$HOME/appimages/Brave-x86_64.AppImage") },
 	{ MODKEY|ALTKEY,		XK_g,		spawn,		SHCMD("steam") },
 	{ MODKEY|ControlMask,		XK_g,		spawn,		SHCMD("lutris") },
-	{ MODKEY|ALTKEY,		XK_n,		spawn,		SHCMD("nitrogen") },
+	{ MODKEY|ControlMask,		XK_l,		spawn,		SHCMD("betterlockscreen -l") },
+//{ MODKEY|ALTKEY,		XK_n,		spawn,		SHCMD("nitrogen") },
 	{ MODKEY|ALTKEY,		XK_v,		spawn,		SHCMD("virt-manager") },
+	{ MODKEY|ALTKEY,		XK_k,		spawn,		SHCMD("$HOME/appimages/kdenlive-21.07.70-185b303-x86_64.appimage") },
 	{ MODKEY|ALTKEY,		XK_p,		spawn,		SHCMD("$HOME/.config/dmenu/power") },
 	{ MODKEY|ALTKEY,		XK_c,		spawn,		SHCMD("$HOME/.config/dmenu/wifi") },
 	{ MODKEY|ALTKEY,		XK_m,		spawn,		SHCMD("flatpak run com.spotify.Client") },
